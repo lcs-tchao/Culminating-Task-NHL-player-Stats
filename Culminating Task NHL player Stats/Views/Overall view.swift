@@ -31,28 +31,7 @@ struct NHLSearchView: View {
 
             Spacer()
             
-            // Bottom Tab Bar
-            HStack {
-                Spacer()
-                VStack {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(.blue)
-                    Text("Search")
-                        .font(.caption)
-                        .foregroundColor(.blue)
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "star")
-                    Text("Favourite")
-                        .font(.caption)
-                }
-                Spacer()
-              
-            }
-            .padding()
-            .background(Color(.systemGray4))
-            .clipShape(RoundedRectangle(cornerRadius: 25))
+      
         }
     }
 }

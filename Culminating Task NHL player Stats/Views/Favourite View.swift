@@ -34,31 +34,7 @@ struct NHLFavouriteView: View {
              RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color(.systemGray4))
                 .padding()
-        
-            
-            // Bottom Tab Bar
-            HStack {
-                Spacer()
-                VStack {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                        .font(.caption)
-                      
-                }
-                Spacer()
-                VStack {
-                    Image(systemName: "star")
-                        .foregroundColor(.blue)
-                    Text("Favourite")
-                        .font(.caption)
-                        .foregroundColor(.blue)
-                }
-                Spacer()
-              
-            }
-            .padding()
-            .background(Color(.systemGray4))
-            .clipShape(RoundedRectangle(cornerRadius: 25))
+       
         }
     }
 }
