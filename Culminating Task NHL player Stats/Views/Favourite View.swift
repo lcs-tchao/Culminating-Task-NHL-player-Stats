@@ -1,13 +1,14 @@
 //
-//  Overall view.swift
+//  Favourite View.swift
 //  Culminating Task NHL player Stats
 //
 //  Created by Yuk Yeung Chao on 2025-04-20.
 //
 
+
 import SwiftUI
 
-struct NHLSearchView: View {
+struct NHLFavouriteView: View {
     @State private var searchText = ""
     
     var body: some View {
@@ -22,30 +23,35 @@ struct NHLSearchView: View {
             }
             
             
-            TextField("Search NHL players..", text: $searchText)
+            TextField("Search Favourite players..", text: $searchText)
                 .padding()
                 .background(Color(.systemGray5))
                 .cornerRadius(15)
                 .padding(.horizontal)
                 .padding(.bottom)
 
-            Spacer()
+
+             RoundedRectangle(cornerRadius: 25)
+                .foregroundColor(Color(.systemGray4))
+                .padding()
+        
             
             // Bottom Tab Bar
             HStack {
                 Spacer()
                 VStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.blue)
                     Text("Search")
                         .font(.caption)
-                        .foregroundColor(.blue)
+                      
                 }
                 Spacer()
                 VStack {
                     Image(systemName: "star")
+                        .foregroundColor(.blue)
                     Text("Favourite")
                         .font(.caption)
+                        .foregroundColor(.blue)
                 }
                 Spacer()
               
@@ -57,8 +63,6 @@ struct NHLSearchView: View {
     }
 }
 
-
 #Preview {
-    NHLSearchView()
+    NHLFavouriteView()
 }
-

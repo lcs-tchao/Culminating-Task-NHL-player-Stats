@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47BFE82DB58BC000805E6B /* Favourite View.swift */; };
 		AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931C2DB54ADE0064B41F /* ContentView.swift */; };
 		AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931D2DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift */; };
 		AF6C93212DB54ADE0064B41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF47BFE82DB58BC000805E6B /* Favourite View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite View.swift"; sourceTree = "<group>"; };
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF6C931B2DB54ADE0064B41F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				AF6C93232DB54AF30064B41F /* Landing View.swift */,
 				AF6C93252DB54AFF0064B41F /* Detail View.swift */,
 				AF6C93272DB54B0F0064B41F /* Overall view.swift */,
+				AF47BFE82DB58BC000805E6B /* Favourite View.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6C93242DB54AF30064B41F /* Landing View.swift in Sources */,
+				AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */,
 				AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */,
 				AF6C93262DB54AFF0064B41F /* Detail View.swift in Sources */,
 				AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
