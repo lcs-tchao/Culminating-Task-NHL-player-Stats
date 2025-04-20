@@ -6,17 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931C2DB54ADE0064B41F /* ContentView.swift */; };
+		AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931D2DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift */; };
+		AF6C93212DB54ADE0064B41F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */; };
+		AF6C93222DB54ADE0064B41F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6C931B2DB54ADE0064B41F /* Assets.xcassets */; };
+		AF6C93242DB54AF30064B41F /* Landing View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C93232DB54AF30064B41F /* Landing View.swift */; };
+		AF6C93262DB54AFF0064B41F /* Detail View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C93252DB54AFF0064B41F /* Detail View.swift */; };
+		AF6C93282DB54B0F0064B41F /* Overall view.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C93272DB54B0F0064B41F /* Overall view.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF6C931B2DB54ADE0064B41F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF6C931C2DB54ADE0064B41F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF6C931D2DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Culminating_Task_NHL_player_StatsApp.swift; sourceTree = "<group>"; };
+		AF6C93232DB54AF30064B41F /* Landing View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing View.swift"; sourceTree = "<group>"; };
+		AF6C93252DB54AFF0064B41F /* Detail View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail View.swift"; sourceTree = "<group>"; };
+		AF6C93272DB54B0F0064B41F /* Overall view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overall view.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		AF6C92F22DB543D90064B41F /* Culminating Task NHL player Stats */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Culminating Task NHL player Stats";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF6C92ED2DB543D90064B41F /* Frameworks */ = {
@@ -32,7 +41,7 @@
 		AF6C92E72DB543D90064B41F = {
 			isa = PBXGroup;
 			children = (
-				AF6C92F22DB543D90064B41F /* Culminating Task NHL player Stats */,
+				AF6C931E2DB54ADE0064B41F /* Culminating Task NHL player Stats */,
 				AF6C92F12DB543D90064B41F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +52,52 @@
 				AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AF6C93162DB54ADE0064B41F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF6C93182DB54ADE0064B41F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF6C93192DB54ADE0064B41F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AF6C931A2DB54ADE0064B41F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C93232DB54AF30064B41F /* Landing View.swift */,
+				AF6C93252DB54AFF0064B41F /* Detail View.swift */,
+				AF6C93272DB54B0F0064B41F /* Overall view.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF6C931E2DB54ADE0064B41F /* Culminating Task NHL player Stats */ = {
+			isa = PBXGroup;
+			children = (
+				AF6C931D2DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift */,
+				AF6C93162DB54ADE0064B41F /* Model */,
+				AF6C93182DB54ADE0064B41F /* Preview Content */,
+				AF6C93192DB54ADE0064B41F /* View Model */,
+				AF6C931A2DB54ADE0064B41F /* Views */,
+				AF6C931B2DB54ADE0064B41F /* Assets.xcassets */,
+				AF6C931C2DB54ADE0064B41F /* ContentView.swift */,
+			);
+			path = "Culminating Task NHL player Stats";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +114,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				AF6C92F22DB543D90064B41F /* Culminating Task NHL player Stats */,
 			);
 			name = "Culminating Task NHL player Stats";
 			packageProductDependencies = (
@@ -109,6 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6C93212DB54ADE0064B41F /* Preview Assets.xcassets in Resources */,
+				AF6C93222DB54ADE0064B41F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6C93242DB54AF30064B41F /* Landing View.swift in Sources */,
+				AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */,
+				AF6C93262DB54AFF0064B41F /* Detail View.swift in Sources */,
+				AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
+				AF6C93282DB54B0F0064B41F /* Overall view.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
