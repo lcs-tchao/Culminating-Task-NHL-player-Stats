@@ -14,16 +14,13 @@ struct NHLSearchView: View {
         VStack {
             // NHL Logo and Title
             HStack {
-                Image("NHL logo")
+                Image("NHL-logo")
                     .resizable()
-                    .frame(width: 40, height: 40)
-                Text("NHL")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer()
+                    .frame(width: 120, height: 60)
+                     Spacer()
+                
             }
-            .padding(.horizontal)
-            .padding(.top)
+            
             
             TextField("Search NHL players..", text: $searchText)
                 .padding()
