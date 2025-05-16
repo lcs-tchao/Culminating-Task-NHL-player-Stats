@@ -21,6 +21,7 @@
 		AF28B6A92DD7C355005C918D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF28B69A2DD7C355005C918D /* Assets.xcassets */; };
 		AF28B6AD2DD7C37C005C918D /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6AC2DD7C37C005C918D /* Search.swift */; };
 		AF28B6AF2DD7C397005C918D /* PlayerSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6AE2DD7C397005C918D /* PlayerSearch.swift */; };
+		AF28B6B72DD7DCB5005C918D /* PlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B62DD7DCB1005C918D /* PlayerInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AF28B69C2DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Culminating_Task_NHL_player_StatsApp.swift; sourceTree = "<group>"; };
 		AF28B6AC2DD7C37C005C918D /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		AF28B6AE2DD7C397005C918D /* PlayerSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearch.swift; sourceTree = "<group>"; };
+		AF28B6B62DD7DCB1005C918D /* PlayerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterface.swift; sourceTree = "<group>"; };
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 		AF28B68C2DD7C355005C918D /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				AF28B6B62DD7DCB1005C918D /* PlayerInterface.swift */,
 				AF28B6AC2DD7C37C005C918D /* Search.swift */,
 				AF28B6AE2DD7C397005C918D /* PlayerSearch.swift */,
 			);
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF28B6AD2DD7C37C005C918D /* Search.swift in Sources */,
+				AF28B6B72DD7DCB5005C918D /* PlayerInterface.swift in Sources */,
 				AF28B69E2DD7C355005C918D /* Player.swift in Sources */,
 				AF28B69F2DD7C355005C918D /* PlayerDetail.swift in Sources */,
 				AF28B6A02DD7C355005C918D /* PlayerDetailViewModel.swift in Sources */,
