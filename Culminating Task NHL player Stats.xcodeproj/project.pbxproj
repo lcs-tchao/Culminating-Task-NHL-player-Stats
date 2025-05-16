@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2CD32F2DD7A51B00560188 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CD32E2DD7A51B00560188 /* Player.swift */; };
+		AF2CD3312DD7A53300560188 /* PlayerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CD3302DD7A53300560188 /* PlayerDetail.swift */; };
 		AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47BFE82DB58BC000805E6B /* Favourite View.swift */; };
 		AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931C2DB54ADE0064B41F /* ContentView.swift */; };
 		AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C931D2DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2CD32E2DD7A51B00560188 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AF2CD3302DD7A53300560188 /* PlayerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetail.swift; sourceTree = "<group>"; };
 		AF47BFE82DB58BC000805E6B /* Favourite View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite View.swift"; sourceTree = "<group>"; };
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6C93172DB54ADE0064B41F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		AF6C93162DB54ADE0064B41F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF2CD32E2DD7A51B00560188 /* Player.swift */,
+				AF2CD3302DD7A53300560188 /* PlayerDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 				AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */,
 				AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */,
 				AF6C93262DB54AFF0064B41F /* Detail View.swift in Sources */,
+				AF2CD32F2DD7A51B00560188 /* Player.swift in Sources */,
+				AF2CD3312DD7A53300560188 /* PlayerDetail.swift in Sources */,
 				AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
 				AF6C93282DB54B0F0064B41F /* Overall view.swift in Sources */,
 			);
