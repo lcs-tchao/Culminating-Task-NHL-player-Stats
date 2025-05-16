@@ -12,8 +12,10 @@ struct NHLSearchView: View {
 
     var body: some View {
         NavigationView {
+        
             List(viewModel.filteredPlayers) { player in
-                Text(player.name)
+                NavigationLink(destination: PlayerDetailView(player: player)){ Text(player.name)}
+                    
             }
             .navigationBarItems(leading:
                 Image("NHL-logo")
