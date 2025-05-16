@@ -8,33 +8,31 @@
 import SwiftUI
 
 struct NHLSearchView: View {
-    @State private var searchText = ""
-    
+    @State var viewModel = PlayerViewModel()
+
     var body: some View {
-        VStack {
-            // NHL Logo and Title
-            HStack {
+        NavigationView {
+            List(viewModel.filteredPlayers) { player in
+                Text(player.name)
+            }
+            .navigationBarItems(leading:
                 Image("NHL-logo")
                     .resizable()
-                    .frame(width: 120, height: 60)
-                     Spacer()
-                
+                    .scaledToFit()
+                    .frame(width: 100, height: 60)
+            )
+            .searchable(text: $viewModel.searchText)
+            // This runs whenever the searchText changes
+            .onChange(of: viewModel.searchText) { oldValue, newValue in
+                Task {
+                    await viewModel.fetchPlayer(playerName: viewModel.searchText)
+                }
             }
-            
-            
-            TextField("Search NHL players..", text: $searchText)
-                .padding()
-                .background(Color(.systemGray5))
-                .cornerRadius(15)
-                .padding(.horizontal)
-                .padding(.bottom)
-
-            Spacer()
-            
-      
         }
     }
 }
+
+
 
 
 #Preview {
