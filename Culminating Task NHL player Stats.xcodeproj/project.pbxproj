@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF28B6682DD7BFD0005C918D /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6672DD7BFD0005C918D /* PlayerViewModel.swift */; };
+		AF28B66A2DD7BFE7005C918D /* PlayerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6692DD7BFE7005C918D /* PlayerDetailViewModel.swift */; };
 		AF2CD32F2DD7A51B00560188 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CD32E2DD7A51B00560188 /* Player.swift */; };
 		AF2CD3312DD7A53300560188 /* PlayerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CD3302DD7A53300560188 /* PlayerDetail.swift */; };
 		AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF47BFE82DB58BC000805E6B /* Favourite View.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF28B6672DD7BFD0005C918D /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		AF28B6692DD7BFE7005C918D /* PlayerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewModel.swift; sourceTree = "<group>"; };
 		AF2CD32E2DD7A51B00560188 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AF2CD3302DD7A53300560188 /* PlayerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetail.swift; sourceTree = "<group>"; };
 		AF47BFE82DB58BC000805E6B /* Favourite View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite View.swift"; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		AF6C93192DB54ADE0064B41F /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF28B6672DD7BFD0005C918D /* PlayerViewModel.swift */,
+				AF28B6692DD7BFE7005C918D /* PlayerDetailViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -185,9 +191,11 @@
 				AF6C93242DB54AF30064B41F /* Landing View.swift in Sources */,
 				AF47BFE92DB58BC100805E6B /* Favourite View.swift in Sources */,
 				AF6C931F2DB54ADE0064B41F /* ContentView.swift in Sources */,
+				AF28B66A2DD7BFE7005C918D /* PlayerDetailViewModel.swift in Sources */,
 				AF6C93262DB54AFF0064B41F /* Detail View.swift in Sources */,
 				AF2CD32F2DD7A51B00560188 /* Player.swift in Sources */,
 				AF2CD3312DD7A53300560188 /* PlayerDetail.swift in Sources */,
+				AF28B6682DD7BFD0005C918D /* PlayerViewModel.swift in Sources */,
 				AF6C93202DB54ADE0064B41F /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
 				AF6C93282DB54B0F0064B41F /* Overall view.swift in Sources */,
 			);
