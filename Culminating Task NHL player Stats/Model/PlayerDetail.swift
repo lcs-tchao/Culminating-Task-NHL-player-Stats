@@ -57,3 +57,4 @@ struct PlayerDetail: Identifiable, Codable {
     let featuredStats: FeaturedStats
       
 }
+
