@@ -106,7 +106,7 @@ struct PlayerInterfaceView: View {
                     Divider()
                     
                     // Navigation to another view (Career Stats)
-                    NavigationLink(destination: PlayerDetailView(player: player)) {
+                    NavigationLink(destination: PlayerCareerStatsView(player: player)) {
                         Rectangle()
                             .fill(Color(.systemGray6))
                             .frame(width: 360, height: 80)

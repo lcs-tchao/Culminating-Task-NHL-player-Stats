@@ -1,5 +1,5 @@
 //
-//  Detail View.swift
+//  PlayerCareerStatsView.swift
 //  Culminating Task NHL player Stats
 //
 //  Created by Yuk Yeung Chao on 2025-04-20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlayerDetailView: View {
+struct PlayerCareerStatsView: View {
     
     // MARK: Stored properties
     let player: Player
@@ -92,6 +92,6 @@ struct PlayerDetailView: View {
     )
 
     return NavigationView {
-        PlayerDetailView(player: samplePlayer)
+        PlayerCareerStatsView(player: samplePlayer)
     }
 }
