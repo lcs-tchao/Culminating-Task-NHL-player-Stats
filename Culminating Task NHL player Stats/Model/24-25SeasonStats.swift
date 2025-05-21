@@ -5,6 +5,7 @@
 //  Created by Yuk Yeung Chao on 2025-05-20.
 //
 
+
 import Foundation
 
 struct FeaturedStatsCurrentSeason: Codable {
@@ -13,10 +14,10 @@ struct FeaturedStatsCurrentSeason: Codable {
 }
 
 struct RegularSeasonStats: Codable {
-    let subSeason: SubSeasonStats
+    let subSeason: CurrentSeasonStats
 }
 
-struct SubSeasonStats: Codable {
+struct CurrentSeasonStats: Codable {
     let assists: Int
     let gameWinningGoals: Int
     let gamesPlayed: Int

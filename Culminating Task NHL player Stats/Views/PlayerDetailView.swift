@@ -6,49 +6,66 @@
 //
 
 import SwiftUI
+
 struct PlayerDetailView: View {
     
     // MARK: Stored properties
     let player: Player
     @State var viewModelDetail = PlayerDetailViewModel()
     
-    
     // MARK: Computed properties
     var body: some View {
-        VStack {
-            
-            // Show a joke if one exists
+        VStack(alignment: .leading, spacing: 12) {
             if let currentPlayer = viewModelDetail.currentPlayer {
                 
+                Text(currentPlayer.fullTeamName.english)
+                    .font(.title)
+                    .bold()
+                
+                Text(currentPlayer.fullTeamName.french)
+                    .font(.title3)
+                    .foregroundColor(.secondary)
+                
+                Divider()
+                
+                Text("Career Stats")
+                    .font(.title3)
+                    .bold()
+                    .padding(.bottom, 5)
+                
                 Group {
-                    Text(currentPlayer.fullTeamName.english)
-                    Text(currentPlayer.fullTeamName.french)
-                    Text("Assists: \(currentPlayer.featuredStats.regularSeason.career.assists)")
-                    Text("Game Winning Goals: \(currentPlayer.featuredStats.regularSeason.career.gameWinningGoals)")
-                    Text("Games Played: \(currentPlayer.featuredStats.regularSeason.career.gamesPlayed)")
-                    Text("Goals: \(currentPlayer.featuredStats.regularSeason.career.goals)")
-                    Text("Ot Goals: \(currentPlayer.featuredStats.regularSeason.career.otGoals)")
-                    Text("Pim: \(currentPlayer.featuredStats.regularSeason.career.pim)")
-                    Text("Plus Minus: \(currentPlayer.featuredStats.regularSeason.career.plusMinus)")
-                    Text("Points: \(currentPlayer.featuredStats.regularSeason.career.points)")
-                    Text("Power Play Goals: \(currentPlayer.featuredStats.regularSeason.career.powerPlayGoals)")
-                    Text("Power Play Points: \(currentPlayer.featuredStats.regularSeason.career.powerPlayPoints)")
-                    Text("Shooting Percentage: \(currentPlayer.featuredStats.regularSeason.career.shootingPctg)")
-                    Text("Short handed Goals: \(currentPlayer.featuredStats.regularSeason.career.shorthandedGoals)")
-                    Text("Short handed points: \(currentPlayer.featuredStats.regularSeason.career.shorthandedPoints)")
-                    Text("Shots: \(currentPlayer.featuredStats.regularSeason.career.shots)")
-                    
+                    statRow(label: "Assists", value: "\(currentPlayer.featuredStats.regularSeason.career.assists)")
+                    statRow(label: "Game Winning Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.gameWinningGoals)")
+                    statRow(label: "Games Played", value: "\(currentPlayer.featuredStats.regularSeason.career.gamesPlayed)")
+                    statRow(label: "Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.goals)")
+                    statRow(label: "OT Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.otGoals)")
+                    statRow(label: "PIM", value: "\(currentPlayer.featuredStats.regularSeason.career.pim)")
+                    statRow(label: "Plus/Minus", value: "\(currentPlayer.featuredStats.regularSeason.career.plusMinus)")
+                    statRow(label: "Points", value: "\(currentPlayer.featuredStats.regularSeason.career.points)")
+                    statRow(label: "Power Play Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.powerPlayGoals)")
+                    statRow(label: "Power Play Points", value: "\(currentPlayer.featuredStats.regularSeason.career.powerPlayPoints)")
+                    statRow(label: "Shooting %", value: String(format: "%.2f%%", currentPlayer.featuredStats.regularSeason.career.shootingPctg * 100))
+                    statRow(label: "Shorthanded Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.shorthandedGoals)")
+                    statRow(label: "Shorthanded Points", value: "\(currentPlayer.featuredStats.regularSeason.career.shorthandedPoints)")
+                    statRow(label: "Shots", value: "\(currentPlayer.featuredStats.regularSeason.career.shots)")
                 }
-                    
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                
-                
+            } else {
+                ProgressView("Loading stats...")
             }
         }
+        .padding()
         .task {
-                   await viewModelDetail.fetchPlayer(for: player.playerId)
-               }
+            await viewModelDetail.fetchPlayer(for: player.playerId)
+        }
+    }
+    
+    private func statRow(label: String, value: String) -> some View {
+        HStack {
+            Text(label + ":")
+                .fontWeight(.semibold)
+            Spacer()
+            Text(value)
+        }
     }
 }
 
