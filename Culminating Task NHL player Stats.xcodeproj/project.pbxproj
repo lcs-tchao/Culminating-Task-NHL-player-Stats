@@ -67,6 +67,7 @@
 		AF28B68C2DD7C355005C918D /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				AF28B6B62DD7DCB1005C918D /* PlayerInterface.swift */,
 				AF28B6AC2DD7C37C005C918D /* Search.swift */,
 				AF28B6AE2DD7C397005C918D /* PlayerSearch.swift */,
 			);
@@ -222,6 +223,7 @@
 			files = (
 				AF28B6B52DD7DACD005C918D /* PlayerInterfaceViewModel.swift in Sources */,
 				AF28B6AD2DD7C37C005C918D /* Search.swift in Sources */,
+				AF28B6B72DD7DCB5005C918D /* PlayerInterface.swift in Sources */,
 				AF28B69E2DD7C355005C918D /* Player.swift in Sources */,
 				AF9971482DDD5DCE0086780A /* 24-25SeasonStats.swift in Sources */,
 				AF28B69F2DD7C355005C918D /* PlayerDetail.swift in Sources */,
