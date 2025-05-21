@@ -28,12 +28,36 @@ struct PlayerStatsView: View {
                 
                 Divider()
                 
-                Text("Career Stats")
-                    .font(.title3)
+                Text("Player Stats")
+                    .font(.title2)
                     .bold()
                     .padding(.bottom, 5)
                 
                 Group {
+                    Text("24-25 SeasonStats")
+                        .font(.title3)
+                        .bold()
+                        .padding(.bottom, 5)
+                    statRow(label: "Assists", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.assists)")
+                    statRow(label: "Game Winning Goals", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.gameWinningGoals)")
+                    statRow(label: "Games Played", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.gamesPlayed)")
+                    statRow(label: "Goals", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.goals)")
+                    statRow(label: "OT Goals", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.otGoals)")
+                    statRow(label: "PIM", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.pim)")
+                    statRow(label: "Plus/Minus", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.plusMinus)")
+                    statRow(label: "Points", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.points)")
+                    statRow(label: "Power Play Goals", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.powerPlayGoals)")
+                    statRow(label: "Power Play Points", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.powerPlayPoints)")
+                    statRow(label: "Shooting %", value: String(format: "%.2f%%", currentPlayer.featuredStats.regularSeason.subSeason.shootingPctg * 100))
+                    statRow(label: "Shorthanded Goals", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.shorthandedGoals)")
+                    statRow(label: "Shorthanded Points", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.shorthandedPoints)")
+                    statRow(label: "Shots", value: "\(currentPlayer.featuredStats.regularSeason.subSeason.shots)")
+                    
+                    Divider()
+                    Text("Career Stats")
+                        .font(.title3)
+                        .bold()
+                        .padding(.bottom, 5)
                     statRow(label: "Assists", value: "\(currentPlayer.featuredStats.regularSeason.career.assists)")
                     statRow(label: "Game Winning Goals", value: "\(currentPlayer.featuredStats.regularSeason.career.gameWinningGoals)")
                     statRow(label: "Games Played", value: "\(currentPlayer.featuredStats.regularSeason.career.gamesPlayed)")
@@ -49,8 +73,6 @@ struct PlayerStatsView: View {
                     statRow(label: "Shorthanded Points", value: "\(currentPlayer.featuredStats.regularSeason.career.shorthandedPoints)")
                     statRow(label: "Shots", value: "\(currentPlayer.featuredStats.regularSeason.career.shots)")
                 }
-            } else {
-                ProgressView("Loading stats...")
             }
         }
         .padding()
