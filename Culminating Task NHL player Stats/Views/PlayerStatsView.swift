@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct PlayerCareerStatsView: View {
+struct PlayerStatsView: View {
     
     // MARK: Stored properties
     let player: Player
-    @State var viewModelDetail = PlayerDetailViewModel()
+    @State var viewModelDetail = PlayerStatsViewModel()
     
     // MARK: Computed properties
     var body: some View {
@@ -90,8 +90,8 @@ struct PlayerCareerStatsView: View {
         birthStateProvince: "ON",
         birthCountry: "Canada"
     )
-
+    
     return NavigationView {
-        PlayerCareerStatsView(player: samplePlayer)
+        PlayerStatsView(player: samplePlayer)
     }
 }

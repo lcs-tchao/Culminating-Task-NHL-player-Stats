@@ -37,7 +37,7 @@ struct StatisticsLine: Codable {
 struct FullTeamName: Codable {
     let english: String
     let french: String
-   
+    
     //provide ncoding and decoding hints when pulling data from endpoint
     enum CodingKeys: String, CodingKey {
         case english = "default"
@@ -46,15 +46,15 @@ struct FullTeamName: Codable {
 }
 
 
-struct PlayerDetail: Identifiable, Codable {
+struct PlayerStats: Identifiable, Codable {
     
-       let id = UUID()
+    let id = UUID()
     let playerId: Int
-       let isActive: Bool
-       let currentTeamId: Int
-       let currentTeamAbbrev: String
+    let isActive: Bool
+    let currentTeamId: Int
+    let currentTeamAbbrev: String
     let fullTeamName: FullTeamName
     let featuredStats: FeaturedStats
-      
+    
 }
 

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AF28B69E2DD7C355005C918D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B68D2DD7C355005C918D /* Player.swift */; };
-		AF28B69F2DD7C355005C918D /* PlayerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B68E2DD7C355005C918D /* PlayerDetail.swift */; };
-		AF28B6A02DD7C355005C918D /* PlayerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6922DD7C355005C918D /* PlayerDetailViewModel.swift */; };
+		AF28B69F2DD7C355005C918D /* PlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B68E2DD7C355005C918D /* PlayerStats.swift */; };
+		AF28B6A02DD7C355005C918D /* PlayerStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6922DD7C355005C918D /* PlayerStatsViewModel.swift */; };
 		AF28B6A12DD7C355005C918D /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6932DD7C355005C918D /* PlayerViewModel.swift */; };
-		AF28B6A22DD7C355005C918D /* PlayerCareerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6952DD7C355005C918D /* PlayerCareerStatsView.swift */; };
+		AF28B6A22DD7C355005C918D /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6952DD7C355005C918D /* PlayerStatsView.swift */; };
 		AF28B6A32DD7C355005C918D /* Favourite View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6962DD7C355005C918D /* Favourite View.swift */; };
 		AF28B6A42DD7C355005C918D /* Landing View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6972DD7C355005C918D /* Landing View.swift */; };
 		AF28B6A52DD7C355005C918D /* NHLSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6982DD7C355005C918D /* NHLSearchView.swift */; };
@@ -31,11 +31,11 @@
 
 /* Begin PBXFileReference section */
 		AF28B68D2DD7C355005C918D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		AF28B68E2DD7C355005C918D /* PlayerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetail.swift; sourceTree = "<group>"; };
+		AF28B68E2DD7C355005C918D /* PlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStats.swift; sourceTree = "<group>"; };
 		AF28B6902DD7C355005C918D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AF28B6922DD7C355005C918D /* PlayerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewModel.swift; sourceTree = "<group>"; };
+		AF28B6922DD7C355005C918D /* PlayerStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsViewModel.swift; sourceTree = "<group>"; };
 		AF28B6932DD7C355005C918D /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
-		AF28B6952DD7C355005C918D /* PlayerCareerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCareerStatsView.swift; sourceTree = "<group>"; };
+		AF28B6952DD7C355005C918D /* PlayerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
 		AF28B6962DD7C355005C918D /* Favourite View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favourite View.swift"; sourceTree = "<group>"; };
 		AF28B6972DD7C355005C918D /* Landing View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing View.swift"; sourceTree = "<group>"; };
 		AF28B6982DD7C355005C918D /* NHLSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLSearchView.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				AF28B68D2DD7C355005C918D /* Player.swift */,
-				AF28B68E2DD7C355005C918D /* PlayerDetail.swift */,
+				AF28B68E2DD7C355005C918D /* PlayerStats.swift */,
 				AF28B6B02DD7DA0E005C918D /* PlayerInterface.swift */,
 				AF9971472DDD5DCE0086780A /* 24-25SeasonStats.swift */,
 			);
@@ -95,7 +95,7 @@
 		AF28B6942DD7C355005C918D /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				AF28B6922DD7C355005C918D /* PlayerDetailViewModel.swift */,
+				AF28B6922DD7C355005C918D /* PlayerStatsViewModel.swift */,
 				AF28B6932DD7C355005C918D /* PlayerViewModel.swift */,
 				AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */,
 				AF9971492DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift */,
@@ -106,7 +106,7 @@
 		AF28B6992DD7C355005C918D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF28B6952DD7C355005C918D /* PlayerCareerStatsView.swift */,
+				AF28B6952DD7C355005C918D /* PlayerStatsView.swift */,
 				AF28B6962DD7C355005C918D /* Favourite View.swift */,
 				AF28B6972DD7C355005C918D /* Landing View.swift */,
 				AF28B6982DD7C355005C918D /* NHLSearchView.swift */,
@@ -224,11 +224,11 @@
 				AF28B6AD2DD7C37C005C918D /* Search.swift in Sources */,
 				AF28B69E2DD7C355005C918D /* Player.swift in Sources */,
 				AF9971482DDD5DCE0086780A /* 24-25SeasonStats.swift in Sources */,
-				AF28B69F2DD7C355005C918D /* PlayerDetail.swift in Sources */,
-				AF28B6A02DD7C355005C918D /* PlayerDetailViewModel.swift in Sources */,
+				AF28B69F2DD7C355005C918D /* PlayerStats.swift in Sources */,
+				AF28B6A02DD7C355005C918D /* PlayerStatsViewModel.swift in Sources */,
 				AF28B6B32DD7DA7C005C918D /* PlayerInterfaceView.swift in Sources */,
 				AF28B6A12DD7C355005C918D /* PlayerViewModel.swift in Sources */,
-				AF28B6A22DD7C355005C918D /* PlayerCareerStatsView.swift in Sources */,
+				AF28B6A22DD7C355005C918D /* PlayerStatsView.swift in Sources */,
 				AF28B6A32DD7C355005C918D /* Favourite View.swift in Sources */,
 				AF99714C2DDD5DF40086780A /* 24-25SeasonStatsView.swift in Sources */,
 				AF28B6A42DD7C355005C918D /* Landing View.swift in Sources */,
