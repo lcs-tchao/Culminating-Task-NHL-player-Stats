@@ -62,7 +62,7 @@ class PlayerStatsViewModel {
     // MARK: Fetch last 5 games stats
     func fetchLastGameStats(for playerId: String) async {
         print("About to get last 5 games stats from endpoint:")
-        let endpoint = "https://api-web.nhle.com/v1/player/\(playerId)/last5Games"
+        let endpoint = "https://api-web.nhle.com/v1/player/\(playerId)/landing"
         print("\(endpoint)")
         guard let url = URL(string: endpoint) else {
             print("Invalid address for JSON endpoint.")
