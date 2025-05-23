@@ -13,12 +13,12 @@ class CurrentSeasonViewModel {
     // MARK: Stored properties
     
 
-    var currentPlayer: CurrentSeasonStats?
+    var currentPlayer: PlayerLastGameStats?
 
-    var favouritePlayer: [CurrentSeasonStats] = []
+    var favouritePlayer: [PlayerLastGameStats] = []
     
     // MARK: Initializer(s)
-    init(currentPlayer: CurrentSeasonStats? = nil) {
+    init(currentPlayer: PlayerLastGameStats? = nil) {
         self.currentPlayer = currentPlayer
     }
     
@@ -42,7 +42,7 @@ class CurrentSeasonViewModel {
         
                 let decoder = JSONDecoder()
 
-                let decodedData = try decoder.decode(CurrentSeasonStats.self, from: data)
+                let decodedData = try decoder.decode(PlayerLastGameStats.self, from: data)
       
                 self.currentPlayer = decodedData
                 

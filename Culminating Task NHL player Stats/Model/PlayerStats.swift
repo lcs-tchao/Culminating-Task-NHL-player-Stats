@@ -46,6 +46,8 @@ struct FullTeamName: Codable {
 }
 
 
+
+
 struct PlayerStats: Identifiable, Codable {
     
     let id = UUID()
@@ -55,6 +57,6 @@ struct PlayerStats: Identifiable, Codable {
     let currentTeamAbbrev: String
     let fullTeamName: FullTeamName
     let featuredStats: FeaturedStats
-    
+
 }
 

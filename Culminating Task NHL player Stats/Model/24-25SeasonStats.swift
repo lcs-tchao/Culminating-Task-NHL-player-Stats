@@ -8,28 +8,29 @@
 
 import Foundation
 
-struct FeaturedStatsCurrentSeason: Codable {
-    let season: Int
-    let regularSeason: RegularSeasonStats
-}
-
-struct RegularSeasonStats: Codable {
-    let subSeason: CurrentSeasonStats
-}
-
-struct CurrentSeasonStats: Codable {
+struct LastGame: Codable, Identifiable {
+    var id: Int { gameId } 
+    
     let assists: Int
-    let gameWinningGoals: Int
-    let gamesPlayed: Int
+    let gameDate: String
+    let gameId: Int
+    let gameTypeId: Int
     let goals: Int
-    let otGoals: Int
+    let homeRoadFlag: String
+    let opponentAbbrev: String
     let pim: Int
     let plusMinus: Int
     let points: Int
     let powerPlayGoals: Int
-    let powerPlayPoints: Int
-    let shootingPctg: Double
+    let shifts: Int
     let shorthandedGoals: Int
-    let shorthandedPoints: Int
     let shots: Int
+    let teamAbbrev: String
+    let toi: String          
+}
+
+struct PlayerLastGameStats: Codable, Identifiable {
+    let id = UUID()
+  
+    let last5Games: [LastGame] // This connects the two models
 }
