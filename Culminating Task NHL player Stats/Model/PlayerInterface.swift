@@ -10,7 +10,7 @@ import Foundation
 
 struct PlayerInterface: Identifiable, Codable {
     let id = UUID()
-    
+    let playerId: String
     let teamLogo: String
     let sweaterNumber: Int
     let position: String

@@ -10,8 +10,9 @@ import SwiftUI
 struct PlayerStatsView: View {
     
     // MARK: Stored properties
-    let player: Player
-    @State var viewModelDetail = PlayerStatsViewModel()
+    
+    // This view will receive a view model from it's caller
+    let viewModelDetail: PlayerStatsViewModel
     
     // MARK: Computed properties
     var body: some View {
@@ -75,16 +76,21 @@ struct PlayerStatsView: View {
                         statRow(label: "Shots", value: "\(currentPlayer.featuredStats.regularSeason.career.shots)")
                     }
                     
-     
-            
+                    // *** New Last 5 Games Section ***
+                    Divider()
                     
+                    Text("Last 5 Games")
+                        .font(.title3)
+                        .bold()
+                        .padding(.bottom, 5)
+                    
+                    LastFiveGamesView(games: viewModelDetail.lastGameStats?.last5Games ?? [])
+
                 }
             }
         }
         .padding()
-        .task {
-            await viewModelDetail.fetchPlayer(for: player.playerId)
-        }
+
     }
     
     private func statRow(label: String, value: String) -> some View {
@@ -94,11 +100,12 @@ struct PlayerStatsView: View {
             Spacer()
             Text(value)
         }
+        
     }
 }
 
 #Preview {
-    let samplePlayer = Player(
+    @Previewable @State var samplePlayer = Player(
         playerId: "8478402", // Example: Connor McDavid
         name: "Connor McDavid",
         positionCode: "C",
@@ -119,7 +126,5 @@ struct PlayerStatsView: View {
         birthCountry: "Canada"
     )
     
-    NavigationView {
-        PlayerStatsView(player: samplePlayer)
-    }
+    PlayerStatsView(viewModelDetail: PlayerStatsViewModel(currentPlayerId: Int(samplePlayer.playerId) ?? 0))
 }

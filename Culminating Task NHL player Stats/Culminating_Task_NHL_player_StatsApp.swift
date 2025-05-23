@@ -11,7 +11,7 @@ import SwiftUI
 struct Culminating_Task_NHL_player_StatsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LandingView()
         }
     }
 }

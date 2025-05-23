@@ -15,7 +15,6 @@
 		AF28B6A32DD7C355005C918D /* Favourite View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6962DD7C355005C918D /* Favourite View.swift */; };
 		AF28B6A42DD7C355005C918D /* Landing View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6972DD7C355005C918D /* Landing View.swift */; };
 		AF28B6A52DD7C355005C918D /* NHLSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6982DD7C355005C918D /* NHLSearchView.swift */; };
-		AF28B6A62DD7C355005C918D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B69B2DD7C355005C918D /* ContentView.swift */; };
 		AF28B6A72DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B69C2DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift */; };
 		AF28B6A82DD7C355005C918D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF28B6902DD7C355005C918D /* Preview Assets.xcassets */; };
 		AF28B6A92DD7C355005C918D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF28B69A2DD7C355005C918D /* Assets.xcassets */; };
@@ -40,7 +39,6 @@
 		AF28B6972DD7C355005C918D /* Landing View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing View.swift"; sourceTree = "<group>"; };
 		AF28B6982DD7C355005C918D /* NHLSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NHLSearchView.swift; sourceTree = "<group>"; };
 		AF28B69A2DD7C355005C918D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF28B69B2DD7C355005C918D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF28B69C2DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Culminating_Task_NHL_player_StatsApp.swift; sourceTree = "<group>"; };
 		AF28B6AC2DD7C37C005C918D /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		AF28B6AE2DD7C397005C918D /* PlayerSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSearch.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				AF28B6942DD7C355005C918D /* View Model */,
 				AF28B6992DD7C355005C918D /* Views */,
 				AF28B69A2DD7C355005C918D /* Assets.xcassets */,
-				AF28B69B2DD7C355005C918D /* ContentView.swift */,
 			);
 			path = "Culminating Task NHL player Stats";
 			sourceTree = "<group>";
@@ -236,7 +233,6 @@
 				AF99714A2DDD5DE20086780A /* Last5GamesStatsViewModel.swift in Sources */,
 				AF28B6A52DD7C355005C918D /* NHLSearchView.swift in Sources */,
 				AF28B6B12DD7DA0E005C918D /* PlayerInterface.swift in Sources */,
-				AF28B6A62DD7C355005C918D /* ContentView.swift in Sources */,
 				AF28B6A72DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
