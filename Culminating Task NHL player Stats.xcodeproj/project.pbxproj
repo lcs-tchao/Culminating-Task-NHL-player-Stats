@@ -24,9 +24,9 @@
 		AF28B6B12DD7DA0E005C918D /* PlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B02DD7DA0E005C918D /* PlayerInterface.swift */; };
 		AF28B6B32DD7DA7C005C918D /* PlayerInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B22DD7DA7C005C918D /* PlayerInterfaceView.swift */; };
 		AF28B6B52DD7DACD005C918D /* PlayerInterfaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */; };
-		AF9971482DDD5DCE0086780A /* 24-25SeasonStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9971472DDD5DCE0086780A /* 24-25SeasonStats.swift */; };
-		AF99714A2DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9971492DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift */; };
-		AF99714C2DDD5DF40086780A /* 24-25SeasonStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99714B2DDD5DF40086780A /* 24-25SeasonStatsView.swift */; };
+		AF9971482DDD5DCE0086780A /* Last5GamesStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9971472DDD5DCE0086780A /* Last5GamesStats.swift */; };
+		AF99714A2DDD5DE20086780A /* Last5GamesStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9971492DDD5DE20086780A /* Last5GamesStatsViewModel.swift */; };
+		AF99714C2DDD5DF40086780A /* Last5GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99714B2DDD5DF40086780A /* Last5GamesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,9 +48,9 @@
 		AF28B6B22DD7DA7C005C918D /* PlayerInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterfaceView.swift; sourceTree = "<group>"; };
 		AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterfaceViewModel.swift; sourceTree = "<group>"; };
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9971472DDD5DCE0086780A /* 24-25SeasonStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24-25SeasonStats.swift"; sourceTree = "<group>"; };
-		AF9971492DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24-25SeasonStatsViewModel.swift"; sourceTree = "<group>"; };
-		AF99714B2DDD5DF40086780A /* 24-25SeasonStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "24-25SeasonStatsView.swift"; sourceTree = "<group>"; };
+		AF9971472DDD5DCE0086780A /* Last5GamesStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last5GamesStats.swift; sourceTree = "<group>"; };
+		AF9971492DDD5DE20086780A /* Last5GamesStatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last5GamesStatsViewModel.swift; sourceTree = "<group>"; };
+		AF99714B2DDD5DF40086780A /* Last5GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last5GamesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 				AF28B68D2DD7C355005C918D /* Player.swift */,
 				AF28B68E2DD7C355005C918D /* PlayerStats.swift */,
 				AF28B6B02DD7DA0E005C918D /* PlayerInterface.swift */,
-				AF9971472DDD5DCE0086780A /* 24-25SeasonStats.swift */,
+				AF9971472DDD5DCE0086780A /* Last5GamesStats.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 				AF28B6922DD7C355005C918D /* PlayerStatsViewModel.swift */,
 				AF28B6932DD7C355005C918D /* PlayerViewModel.swift */,
 				AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */,
-				AF9971492DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift */,
+				AF9971492DDD5DE20086780A /* Last5GamesStatsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 				AF28B6972DD7C355005C918D /* Landing View.swift */,
 				AF28B6982DD7C355005C918D /* NHLSearchView.swift */,
 				AF28B6B22DD7DA7C005C918D /* PlayerInterfaceView.swift */,
-				AF99714B2DDD5DF40086780A /* 24-25SeasonStatsView.swift */,
+				AF99714B2DDD5DF40086780A /* Last5GamesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,17 +223,17 @@
 				AF28B6B52DD7DACD005C918D /* PlayerInterfaceViewModel.swift in Sources */,
 				AF28B6AD2DD7C37C005C918D /* Search.swift in Sources */,
 				AF28B69E2DD7C355005C918D /* Player.swift in Sources */,
-				AF9971482DDD5DCE0086780A /* 24-25SeasonStats.swift in Sources */,
+				AF9971482DDD5DCE0086780A /* Last5GamesStats.swift in Sources */,
 				AF28B69F2DD7C355005C918D /* PlayerStats.swift in Sources */,
 				AF28B6A02DD7C355005C918D /* PlayerStatsViewModel.swift in Sources */,
 				AF28B6B32DD7DA7C005C918D /* PlayerInterfaceView.swift in Sources */,
 				AF28B6A12DD7C355005C918D /* PlayerViewModel.swift in Sources */,
 				AF28B6A22DD7C355005C918D /* PlayerStatsView.swift in Sources */,
 				AF28B6A32DD7C355005C918D /* Favourite View.swift in Sources */,
-				AF99714C2DDD5DF40086780A /* 24-25SeasonStatsView.swift in Sources */,
+				AF99714C2DDD5DF40086780A /* Last5GamesView.swift in Sources */,
 				AF28B6A42DD7C355005C918D /* Landing View.swift in Sources */,
 				AF28B6AF2DD7C397005C918D /* PlayerSearch.swift in Sources */,
-				AF99714A2DDD5DE20086780A /* 24-25SeasonStatsViewModel.swift in Sources */,
+				AF99714A2DDD5DE20086780A /* Last5GamesStatsViewModel.swift in Sources */,
 				AF28B6A52DD7C355005C918D /* NHLSearchView.swift in Sources */,
 				AF28B6B12DD7DA0E005C918D /* PlayerInterface.swift in Sources */,
 				AF28B6A62DD7C355005C918D /* ContentView.swift in Sources */,
