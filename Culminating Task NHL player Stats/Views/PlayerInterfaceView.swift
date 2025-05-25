@@ -14,6 +14,12 @@ struct PlayerInterfaceView: View {
 //    let stats: FeaturedStatsCurrentSeason
     @State var viewModelInterface = PlayerInterfaceViewModel()
     
+    @Environment(PlayerViewModel.self) var viewModel
+   
+    @State var playerHasBeenSaved = false
+    @State var buttonOpacity = 0.0
+    
+    
     // MARK: Computed properties
     var body: some View {
         ScrollView {
@@ -122,6 +128,22 @@ struct PlayerInterfaceView: View {
                                     .bold()
                             )
                     }
+                    Button {
+                        
+                        // Save the joke
+                        viewModel.saveFavoritePlayer()
+                        
+                        // Disable this button until next joke is loaded
+                        playerHasBeenSaved = true
+                        
+                    } label: {
+                        Text("Save for later")
+                    }
+                    .tint(.green)
+                    .buttonStyle(.borderedProminent)
+                    .opacity(buttonOpacity)
+                    .padding(.bottom, 20)
+                    .disabled(playerHasBeenSaved)
               
                 
                 }

@@ -22,7 +22,7 @@ struct LandingView: View {
                     }
                     .tag(1)
                 
-                NHLFavouriteView()
+            FavouritePlayersView()
                     .tabItem {
                         VStack {
                             Image(systemName: "star")
