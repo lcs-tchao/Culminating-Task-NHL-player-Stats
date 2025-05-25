@@ -58,14 +58,22 @@ class PlayerViewModel {
     
     // MARK: Save favourite players
     func saveFavoritePlayer() {
-        if let currentPlayer = self.currentPlayer {
-            if !favouritePlayer.contains(where: { $0.id == currentPlayer.id }) {
-                favouritePlayer.insert(currentPlayer, at: 0)
-                print("Added \(currentPlayer.name) to favourites.")
-            } else {
-                print("\(currentPlayer.name) is already in favourites.")
-            }
+        guard let currentPlayer = self.currentPlayer else {
+            print("⚠️ currentPlayer is nil")
+            return
         }
-        print("There are \(favouritePlayer.count) favourite players saved.")
+
+        print("Trying to save: \(currentPlayer.name), ID: \(currentPlayer.id)")
+        print("Current favourites: \(favouritePlayer.map { $0.name })")
+
+        if !favouritePlayer.contains(where: { $0.id == currentPlayer.id }) {
+            favouritePlayer.insert(currentPlayer, at: 0)
+            print("✅ Added \(currentPlayer.name) to favourites.")
+        } else {
+            print("ℹ️ \(currentPlayer.name) is already in favourites.")
+        }
+
+        print("✅ There are \(favouritePlayer.count) favourite players saved.")
     }
+
 }
