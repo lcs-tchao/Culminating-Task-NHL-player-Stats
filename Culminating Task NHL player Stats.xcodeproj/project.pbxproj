@@ -23,6 +23,7 @@
 		AF28B6B12DD7DA0E005C918D /* PlayerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B02DD7DA0E005C918D /* PlayerInterface.swift */; };
 		AF28B6B32DD7DA7C005C918D /* PlayerInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B22DD7DA7C005C918D /* PlayerInterfaceView.swift */; };
 		AF28B6B52DD7DACD005C918D /* PlayerInterfaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */; };
+		AF65F3842DE2DEC0001B8FFE /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF65F3832DE2DEC0001B8FFE /* Shared.swift */; };
 		AF99714C2DDD5DF40086780A /* Last5GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99714B2DDD5DF40086780A /* Last5GamesView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		AF28B6B02DD7DA0E005C918D /* PlayerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterface.swift; sourceTree = "<group>"; };
 		AF28B6B22DD7DA7C005C918D /* PlayerInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterfaceView.swift; sourceTree = "<group>"; };
 		AF28B6B42DD7DACD005C918D /* PlayerInterfaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInterfaceViewModel.swift; sourceTree = "<group>"; };
+		AF65F3832DE2DEC0001B8FFE /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		AF6C92F02DB543D90064B41F /* Culminating Task NHL player Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Culminating Task NHL player Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF99714B2DDD5DF40086780A /* Last5GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last5GamesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AF28B69C2DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift */,
+				AF65F3822DE2DEB7001B8FFE /* shared */,
 				AF28B68C2DD7C355005C918D /* Functions */,
 				AF28B68F2DD7C355005C918D /* Model */,
 				AF28B6912DD7C355005C918D /* Preview Content */,
@@ -120,6 +123,14 @@
 				AF28B69A2DD7C355005C918D /* Assets.xcassets */,
 			);
 			path = "Culminating Task NHL player Stats";
+			sourceTree = "<group>";
+		};
+		AF65F3822DE2DEB7001B8FFE /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF65F3832DE2DEC0001B8FFE /* Shared.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 		AF6C92E72DB543D90064B41F = {
@@ -225,6 +236,7 @@
 				AF28B6AF2DD7C397005C918D /* PlayerSearch.swift in Sources */,
 				AF28B6A52DD7C355005C918D /* NHLSearchView.swift in Sources */,
 				AF28B6B12DD7DA0E005C918D /* PlayerInterface.swift in Sources */,
+				AF65F3842DE2DEC0001B8FFE /* Shared.swift in Sources */,
 				AF28B6A72DD7C355005C918D /* Culminating_Task_NHL_player_StatsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

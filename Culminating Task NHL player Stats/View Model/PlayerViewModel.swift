@@ -13,14 +13,17 @@ class PlayerViewModel {
     var allPlayers: [Player] = []
     var filteredPlayers: [Player] = []
     var currentPlayer: Player?
-    
     var favouritePlayer: [Player] = []
+    
+    
+    
     
     var searchText: String = "" {
         didSet {
             filterPlayers()
         }
     }
+    
     
     // MARK: Fetch from endpoint with search
     func fetchPlayer(playerName: String) async {

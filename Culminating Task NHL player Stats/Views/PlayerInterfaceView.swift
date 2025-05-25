@@ -16,6 +16,7 @@ struct PlayerInterfaceView: View {
     
     @Environment(PlayerViewModel.self) var viewModel
    
+   
     @State var playerHasBeenSaved = false
     @State var buttonOpacity = 0.0
     
@@ -201,5 +202,6 @@ struct PlayerInterfaceView: View {
     
     NavigationView {
         PlayerInterfaceView(player: samplePlayer)
+            .environment(PlayerViewModel())
     }
 }
