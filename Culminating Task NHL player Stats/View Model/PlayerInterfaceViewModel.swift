@@ -9,7 +9,7 @@
 import Foundation
 
 
-@Observable
+@Observable @MainActor
 class PlayerInterfaceViewModel{
     
     // MARK: Stored properties

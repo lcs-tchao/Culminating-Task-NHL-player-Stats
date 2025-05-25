@@ -11,14 +11,12 @@ struct PlayerInterfaceView: View {
     
     // MARK: Stored properties
     let player: Player
-//    let stats: FeaturedStatsCurrentSeason
     @State var viewModelInterface = PlayerInterfaceViewModel()
     
     @Environment(PlayerViewModel.self) var viewModel
    
-   
     @State var playerHasBeenSaved = false
-    @State var buttonOpacity = 0.0
+    @State var buttonOpacity = 1.0  // FIXED: Set to 1.0 so the button is visible
     
     
     // MARK: Computed properties
@@ -129,14 +127,11 @@ struct PlayerInterfaceView: View {
                                     .bold()
                             )
                     }
+                    
+                    // Save Button
                     Button {
-                        
-                        // Save the joke
                         viewModel.saveFavoritePlayer()
-                        
-                        // Disable this button until next joke is loaded
                         playerHasBeenSaved = true
-                        
                     } label: {
                         Text("Save for later")
                     }
@@ -145,8 +140,6 @@ struct PlayerInterfaceView: View {
                     .opacity(buttonOpacity)
                     .padding(.bottom, 20)
                     .disabled(playerHasBeenSaved)
-              
-                
                 }
             }
             .padding()

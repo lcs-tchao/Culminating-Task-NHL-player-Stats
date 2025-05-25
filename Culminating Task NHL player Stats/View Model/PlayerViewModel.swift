@@ -7,7 +7,7 @@
 
 import Foundation
 
-@Observable
+@Observable @MainActor
 class PlayerViewModel {
     
     var allPlayers: [Player] = []
