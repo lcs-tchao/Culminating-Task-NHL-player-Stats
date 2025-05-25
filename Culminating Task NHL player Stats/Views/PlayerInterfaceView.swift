@@ -140,6 +140,7 @@ struct PlayerInterfaceView: View {
                     .opacity(buttonOpacity)
                     .padding(.bottom, 20)
                     .disabled(playerHasBeenSaved)
+                    
                 }
             }
             .padding()

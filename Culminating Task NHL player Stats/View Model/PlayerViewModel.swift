@@ -58,22 +58,15 @@ class PlayerViewModel {
     
     // MARK: Save favourite players
     func saveFavoritePlayer() {
-        guard let currentPlayer = self.currentPlayer else {
-            print("⚠️ currentPlayer is nil")
-            return
-        }
-
-        print("Trying to save: \(currentPlayer.name), ID: \(currentPlayer.id)")
-        print("Current favourites: \(favouritePlayer.map { $0.name })")
-
-        if !favouritePlayer.contains(where: { $0.id == currentPlayer.id }) {
+        
+        // Save current joke
+        if let currentPlayer = self.currentPlayer {
             favouritePlayer.insert(currentPlayer, at: 0)
-            print("✅ Added \(currentPlayer.name) to favourites.")
-        } else {
-            print("ℹ️ \(currentPlayer.name) is already in favourites.")
         }
-
-        print("✅ There are \(favouritePlayer.count) favourite players saved.")
+        
+        // How many saved jokes are there now?
+        print("There are \( favouritePlayer.count) player saved.")
+     
     }
 
 }
