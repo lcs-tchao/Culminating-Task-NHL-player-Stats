@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct Culminating_Task_NHL_player_StatsApp: App {
+struct CulminatingTaskNHLPlayerStatsApp: App {
+    @State var playerViewModel = PlayerViewModel()
+    
     var body: some Scene {
         WindowGroup {
             LandingView()
+                .environment(playerViewModel)
         }
     }
 }

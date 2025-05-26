@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct PlayerInterfaceView: View {
-    
-    // MARK: Stored properties
     let player: Player
     @State var viewModelInterface = PlayerInterfaceViewModel()
-    
     @Environment(PlayerViewModel.self) var viewModel
    
     @State var playerHasBeenSaved = false
-    @State var buttonOpacity = 1.0  // FIXED: Set to 1.0 so the button is visible
-    
-    
-    // MARK: Computed properties
+    @State var buttonOpacity = 1.0
+
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -33,8 +28,8 @@ struct PlayerInterfaceView: View {
                     } placeholder: {
                         ProgressView()
                     }
-                    
-                    // Headshot
+
+                    // Headshot and Info
                     HStack {
                         AsyncImage(url: URL(string: currentPlayer.headshot)) { image in
                             image.resizable()
@@ -110,7 +105,7 @@ struct PlayerInterfaceView: View {
                     
                     Divider()
                     
-                    // Navigation to another view (Career Stats)
+                    // Navigation to Career Stats
                     NavigationLink(
                         destination: PlayerStatsView(viewModelDetail: PlayerStatsViewModel(
                             currentPlayerId: Int(currentPlayer.playerId) ?? 0
@@ -128,9 +123,9 @@ struct PlayerInterfaceView: View {
                             )
                     }
                     
-                    // Save Button
+                    // --- Save Button (only the function call is fixed) ---
                     Button {
-                        viewModel.saveFavoritePlayer()
+                        viewModel.saveFavoritePlayer(player) // <--- THIS IS THE ONLY LINE CHANGED!
                         playerHasBeenSaved = true
                     } label: {
                         Text("Save for later")
@@ -140,7 +135,6 @@ struct PlayerInterfaceView: View {
                     .opacity(buttonOpacity)
                     .padding(.bottom, 20)
                     .disabled(playerHasBeenSaved)
-                    
                 }
             }
             .padding()
@@ -148,7 +142,6 @@ struct PlayerInterfaceView: View {
                 await viewModelInterface.fetchPlayer(for: player.playerId)
             }
         }
-        // customize the navigation bar or toolbars in the view
         .toolbar {
             if let currentPlayer = viewModelInterface.currentPlayer {
                 ToolbarItem(placement: .principal) {
@@ -193,7 +186,7 @@ struct PlayerInterfaceView: View {
         birthStateProvince: "ON",
         birthCountry: "Canada"
     )
-    
+
     NavigationView {
         PlayerInterfaceView(player: samplePlayer)
             .environment(PlayerViewModel())

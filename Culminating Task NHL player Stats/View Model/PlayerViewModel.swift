@@ -6,24 +6,19 @@
 //
 
 import Foundation
+import Observation
 
-@Observable @MainActor
+@Observable
 class PlayerViewModel {
-    
     var allPlayers: [Player] = []
     var filteredPlayers: [Player] = []
     var currentPlayer: Player?
     var favouritePlayer: [Player] = []
-    
-    
-    
-    
     var searchText: String = "" {
         didSet {
             filterPlayers()
         }
     }
-    
     
     // MARK: Fetch from endpoint with search
     func fetchPlayer(playerName: String) async {
@@ -40,7 +35,6 @@ class PlayerViewModel {
             let decoder = JSONDecoder()
             let decodedData = try decoder.decode([Player].self, from: data)
 
-            // Update properties — @Observable tracks changes automatically
             self.allPlayers = decodedData
             self.filteredPlayers = decodedData
             self.currentPlayer = decodedData.first
@@ -51,22 +45,14 @@ class PlayerViewModel {
         }
     }
     
-    // MARK: Filter players for search
     func filterPlayers() {
         self.filteredPlayers = SearchUtility.filterPlayers(originalList: allPlayers, against: searchText)
     }
     
-    // MARK: Save favourite players
-    func saveFavoritePlayer() {
-        
-        // Save current joke
-        if let currentPlayer = self.currentPlayer {
-            favouritePlayer.insert(currentPlayer, at: 0)
+    func saveFavoritePlayer(_ player: Player) {
+        if !favouritePlayer.contains(where: { $0.playerId == player.playerId }) {
+            favouritePlayer.insert(player, at: 0)
         }
-        
-        // How many saved jokes are there now?
-        print("There are \( favouritePlayer.count) player saved.")
-     
+        print("There are \(favouritePlayer.count) players saved.")
     }
-
 }

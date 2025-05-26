@@ -5,21 +5,15 @@
 //  Created by Yuk Yeung Chao on 2025-04-20.
 //
 
-
 import SwiftUI
 
 struct FavouritePlayersView: View {
-    
-    // Access the PlayerViewModel from environment
     @Environment(PlayerViewModel.self) var viewModel
     
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background color (customize if you want)
-                Color(.systemBackground)
-                    .ignoresSafeArea()
-                
+                Color(.systemBackground).ignoresSafeArea()
                 VStack {
                     if viewModel.favouritePlayer.isEmpty {
                         ContentUnavailableView(
@@ -59,8 +53,6 @@ struct FavouritePlayersView: View {
 }
 
 #Preview {
-
     FavouritePlayersView()
         .environment(PlayerViewModel())
 }
-
