@@ -29,6 +29,7 @@ struct Player: Identifiable, Codable {
     let birthCity: String
     let birthStateProvince: String?
     let birthCountry: String
+    
     // MARK: Computed properties
     
 }
@@ -53,4 +54,6 @@ let examplePlayer = Player (
     birthCity: "Richmond Hill",
     birthStateProvince: "ON",
     birthCountry: "CAN"
+    
+
 )

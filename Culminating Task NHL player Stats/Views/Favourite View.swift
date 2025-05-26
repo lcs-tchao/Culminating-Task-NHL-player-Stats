@@ -9,11 +9,18 @@ import SwiftUI
 
 struct FavouritePlayersView: View {
     @Environment(PlayerViewModel.self) var viewModel
-    
+
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(.systemBackground).ignoresSafeArea()
+                // Gradient background replaces plain color
+                LinearGradient(
+                    colors: [Color.white, Color.orange, Color.blue],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
                 VStack {
                     if viewModel.favouritePlayer.isEmpty {
                         ContentUnavailableView(
@@ -23,14 +30,16 @@ struct FavouritePlayersView: View {
                         )
                     } else {
                         List(viewModel.favouritePlayer, id: \.id) { player in
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(player.name)
-                                    .font(.headline)
-                                Text("\(player.positionCode) — #\(player.sweaterNumber)")
-                                    .font(.subheadline)
-                                    .foregroundColor(.secondary)
+                            NavigationLink(destination: PlayerInterfaceView(player: player)) {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(player.name)
+                                        .font(.headline)
+                                    
+                                    Text("\(player.positionCode)  #\(player.sweaterNumber ?? 0)")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                }
                             }
-                            .padding(.vertical, 5)
                             .swipeActions {
                                 Button(role: .destructive) {
                                     withAnimation {
@@ -56,3 +65,4 @@ struct FavouritePlayersView: View {
     FavouritePlayersView()
         .environment(PlayerViewModel())
 }
+

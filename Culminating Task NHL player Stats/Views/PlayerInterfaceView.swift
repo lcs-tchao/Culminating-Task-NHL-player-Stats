@@ -11,11 +11,19 @@ struct PlayerInterfaceView: View {
     let player: Player
     @State var viewModelInterface = PlayerInterfaceViewModel()
     @Environment(PlayerViewModel.self) var viewModel
-   
+    
     @State var playerHasBeenSaved = false
     @State var buttonOpacity = 1.0
-
+    
     var body: some View {
+        ZStack {
+            // Gradient background replaces plain color
+            LinearGradient(
+                colors: [Color.blue, Color.white, Color.orange],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
         ScrollView {
             VStack(spacing: 20) {
                 if let currentPlayer = viewModelInterface.currentPlayer {
@@ -28,7 +36,7 @@ struct PlayerInterfaceView: View {
                     } placeholder: {
                         ProgressView()
                     }
-
+                    
                     // Headshot and Info
                     HStack {
                         AsyncImage(url: URL(string: currentPlayer.headshot)) { image in
@@ -109,7 +117,7 @@ struct PlayerInterfaceView: View {
                     NavigationLink(
                         destination: PlayerStatsView(viewModelDetail: PlayerStatsViewModel(
                             currentPlayerId: Int(currentPlayer.playerId) ?? 0
-                            )
+                        )
                         )
                     ) {
                         Rectangle()
@@ -123,18 +131,21 @@ struct PlayerInterfaceView: View {
                             )
                     }
                     
-                    // --- Save Button (only the function call is fixed) ---
+                    
                     Button {
-                        viewModel.saveFavoritePlayer(player) // <--- THIS IS THE ONLY LINE CHANGED!
+                        viewModel.saveFavoritePlayer(player)
                         playerHasBeenSaved = true
                     } label: {
-                        Text("Save for later")
+                        Label(
+                            playerHasBeenSaved ? "Saved!" : "Save to favorites",
+                            systemImage: playerHasBeenSaved ? "checkmark.circle.fill" : "plus.circle"
+                        )
+                        .frame(maxWidth: .infinity)
                     }
-                    .tint(.green)
                     .buttonStyle(.borderedProminent)
+                    .tint(playerHasBeenSaved ? .green : .blue)
                     .opacity(buttonOpacity)
                     .padding(.bottom, 20)
-                    .disabled(playerHasBeenSaved)
                 }
             }
             .padding()
@@ -164,6 +175,7 @@ struct PlayerInterfaceView: View {
         }
     }
 }
+}
 
 #Preview {
     let samplePlayer = Player(
@@ -185,6 +197,7 @@ struct PlayerInterfaceView: View {
         birthCity: "Richmond Hill",
         birthStateProvince: "ON",
         birthCountry: "Canada"
+        
     )
 
     NavigationView {
